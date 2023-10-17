@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rezervasyon Uygulaması</title>
+</head>
+<body>
+    <h1>Rezervasyon Uygulaması</h1>
+
+    <div class="form-container">
+        <h2>Yeni Rezervasyon Ekle</h2>
+        <form id="reservation-form">
+            <label for="name">Adı *</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Telefon Numarası *</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="branch">Şube Seçimi</label>
+            <select id="branch" name="branch">
+                <option value="branch1">Şube 1</option>
+                <option value="branch2">Şube 2</option>
+                <option value="branch3">Şube 3</option>
+            </select>
+
+            <label for="reservation-date">Rezervasyon Günü ve Saati *</label>
+            <input type="datetime-local" id="reservation-date" name="reservation-date" required>
+
+            <label for="notes">Eklemek İstediği Not</label>
+            <textarea id="notes" name="notes" rows="4"></textarea>
+
+            <button type="submit">Rezervasyon Ekle</button>
+        </form>
+    </div>
+
+    <div class="reservation-list">
+        <h2>Rezervasyonlar</h2>
+        <ul id="reservation-list"></ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js" integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="api.js"></script>
+</body>
+</html>
